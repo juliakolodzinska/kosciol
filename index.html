@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+    <title>Model AR</title>
+
+    <style>
+        #header h3 {
+            color: #000;
+            margin: 0;
+            font-family:  Arial, Helvetica, sans-serif;
+            padding: 0px 7px 4px 4px;
+            text-align: center;
+            margin-top: 0;
+        }
+      
+     #bottom h4 {
+            color: #000;
+            margin: 0;
+            font-family:  Arial, Helvetica, sans-serif;
+            padding: 0px 0px 4px 4px;
+            text-align: center;
+            margin-top: 0;
+        }
+      
+        model-viewer {
+            width: 100%;
+            height: 77vh;
+            margin: 0 auto;
+            border: 1px solid #cccbc6;
+        }
+     
+        model-viewer #ar-button {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55%;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 7px 10px 4px;
+            border: 1px solid #393a37;
+            color: #393a37;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+  
+<body>
+      <div id="header">
+            <h3>Geowizualizacja Kościoła Świętej Małgorzaty w Graboszewie <br/><i></i></h3>
+      </div>
+    
+
+  
+      <div id="model-ar">
+          <model-viewer id="geowizualizacja1"
+                    scale="0.1 0.1 0.1"
+                    src="https://cdn.glitch.global/580800fc-5a3f-4fbc-9dfa-c568ea3bdb80/ok.glb?v=1730404157474"
+                    alt="Kościół Świętej Małgorzaty w Graboszewie "
+                    ar 
+                    ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls
+                    camera-orbit="0deg 70deg 0.5m" 
+                    quick-look-browsers="safari chrome" 
+                    ios-src="https://cdn.glitch.me/580800fc-5a3f-4fbc-9dfa-c568ea3bdb80/ok.usdz?v=1730712141017">
+
+                  <button slot="ar-button" id="ar-button">wyświetl u siebie &nbsp [AR]</button>    
+           </model-viewer>
+        </div>
+  <div id="bottom"> <h4> Julia Kołodzińska</h4><br/><i></i>
+  </div>
+
+  </body>
+</html>
